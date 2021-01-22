@@ -123,6 +123,46 @@
           }
         }
       }
+    },
+    "sml-ng-line-break": {
+      "projectType": "library",
+      "root": "projects/sml-ng-line-break",
+      "sourceRoot": "projects/sml-ng-line-break/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/sml-ng-line-break/tsconfig.lib.json",
+            "project": "projects/sml-ng-line-break/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sml-ng-line-break/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sml-ng-line-break/src/test.ts",
+            "tsConfig": "projects/sml-ng-line-break/tsconfig.spec.json",
+            "karmaConfig": "projects/sml-ng-line-break/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/sml-ng-line-break/tsconfig.lib.json",
+              "projects/sml-ng-line-break/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "sml-line-break"
 }

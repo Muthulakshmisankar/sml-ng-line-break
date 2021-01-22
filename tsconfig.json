@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "sml-ng-line-break": [
+        "dist/sml-ng-line-break/sml-ng-line-break",
+        "dist/sml-ng-line-break"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
